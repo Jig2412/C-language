@@ -88,20 +88,19 @@ void draw() {
       printf("\n");
             
     }    
-    // bottom walls  ('-')
+    
     for (int i = 0; i < Width + 2; i++)
         printf("-");
      printf("\n");
 
-    // It will show score and instructions
+    
     printf("score = %d", score);
     printf("\n");
     printf("Press Up Arrow, Down Arrow, Left Arrow, and Right Arrow for movement.\n");
     printf("Press X to quit the game.");
 }
 
-// Function to take the real time input and
-// set the 'flag' variable accordingly
+
 void input() {
     if (kbhit()) {
         int ch = getch();
@@ -136,8 +135,7 @@ void input() {
     }
 }
 
-// Function for the movement logic that
-// checks eat, move, collisions
+
 void logic() {
     
     
@@ -204,14 +202,14 @@ void main() {
     
     setup();
 
-    // Game loop starts here
+    // game loop starts here
     while (!gameover) {
 
-        // Functions that will be called
-        // repeatedly after the given interval
+        
         draw();
         input();
         logic();
         Sleep(50);
     }
+
 }
